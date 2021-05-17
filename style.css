@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'PT Sans Narrow', sans-serif;
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+.container {
+    /* Stops from hitting the edges, placed in a container and than container is not 100% */
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+.btn {
+    /* Used inline block as we used a anchor and they come standard inline and block stops it over flowing */
+    display: inline-block;
+    text-decoration: none;
+    padding: .5em 1.25em;
+    background: var(--clr-accent, blue);
+    color: var(--clr-text, white);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    /* Softens the corners a little */
+    border-radius: .25rem;
+    /* Slows down the change that happens on the hover and focus of the anchors elements */
+    transition: 
+        transform 250ms ease-in-out,
+        opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
+    opacity: .9;
+}
+
+.primary-title {
+    font-size: 3.5rem;
+    /* Clamp will change the font size depnding on the screen size, 3 is the smallest and than grows by 1 until it hits the max of 4.5 */
+    /* font-size: clamp(4rem, calc(5vm + 1rem), 5.5rem); */
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.coming-soon-text {
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.coming-soon-container {
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+    background: blue;
+    color: white;
+    padding: 1em 0;
+    margin: 1em;
+}
+
+.call-to-action {
+    background: white;
+    color: blue;
+    text-align: center;
+    width: 100%;
+    margin: 2%;
+}
+
+.hero {
+    text-align: center;
+    padding: 9em 0;
+    background: grey;
+    background-blend-mode: multiply;
+}
